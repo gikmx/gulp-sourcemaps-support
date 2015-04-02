@@ -1,7 +1,7 @@
 {
   "name": "gulp-sourcemaps-support",
   "version": "0.0.1",
-  "description": "Not sure yet",
+  "description": "A companion for 'gulp-sourcemaps' that enables 'source-map-support' in your code automatically.",
   "main": "build/index.js",
   "keywords": [],
   "author": "Hector Menendez <etor@gik.mx> (http://gik.mx)",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "babel-runtime": "^5.0.0-beta1",
-    "gulp-util": "^3.0.4",
+    "source-map-support": "^0.2.10",
     "through2": "^0.6.3"
   }
 }

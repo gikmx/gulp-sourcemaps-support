@@ -8,10 +8,10 @@ const Path = require('path');
 
 const Gulp   = require('gulp');
 const Lint   = require('gulp-eslint');
-const Source = require('gulp-sourcemaps');
 const Babel  = require('gulp-babel');
 const Mocha  = require('gulp-spawn-mocha');
 const Watch  = require('gulp-watch');
+const Source = require('gulp-sourcemaps');
 const Del    = require('del');
 const Chalk  = require('chalk');
 
@@ -53,8 +53,10 @@ Config.lint = {
 
 Config.babel = {
 	optional      : ['runtime'],
-	sourceMap     : 'both',
+	sourceMap     : ['both'],
+	blacklist     : ['strict'], // removes use strict
 	sourceMapName : '.map',
+	sourceRoot    : Dir.src,
 	comments      : false
 };
 
@@ -106,7 +108,7 @@ Gulp.task('build', ['clean', 'lint', 'test'], function(){
 	return Gulp.src(Route.src)
 		.pipe(Source.init())
 		.pipe(Babel(Config.babel))
-		.pipe(Source.write()) // inline sourcemaps
+		.pipe(Source.write('.'))
 		.pipe(Gulp.dest(Dir.build));
 });
 
