@@ -9,7 +9,7 @@
   "scripts": {
     "test": "gulp test",
     "build": "gulp build",
-    "watch": "gulp wathc"
+    "watch": "gulp watch"
   },
   "devDependencies": {
     "babel": "^4.7.x",

@@ -3,7 +3,6 @@
 //--------------------------------------------------------------------------- NODE MODULES
 
 const Path = require('path');
-const Exec = require('child_process').exec;
 
 //---------------------------------------------------------------------------- NPM MODULES
 
@@ -115,18 +114,8 @@ Gulp.task('watch', ['build'], function(){
 
 	let firstrun = true;
 
-	const onOutput = function(buffer){
-		process.stdout.write(buffer.toString('utf-8'));
-	};
-
 	const onBuild = function(){
-		let proc  = Exec(process.execPath + ' ' + Route.index);
-		proc.stdout.on('data', onOutput);
-		proc.stderr.on('data', onOutput);
-		proc.on('error', function(err){ throw err; });
-		proc.on('exit', function(){
-			process.stdout.write('\n\n' + Chalk.yellow('Waiting for changes…') + '\n');
-		});
+		process.stdout.write('\n\n' + Chalk.yellow('Waiting for changes…') + '\n\n');
 	};
 
 	Watch(Route.src.concat(Route.test).concat([__filename]), function(){
@@ -138,6 +127,5 @@ Gulp.task('watch', ['build'], function(){
 			onBuild();
 		});
 	});
-
 	onBuild();
 });
