@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A companion for 'gulp-sourcemaps' that enables 'source-map-support' in your code automatically.",
   "main": "build/index.js",
-  "keywords": [],
+  "keywords": ["gulp","sourcemaps","source maps","source-map-support","gik","gikmx","etor","et0r"],
   "author": "Hector Menendez <etor@gik.mx> (http://gik.mx)",
   "license": "MIT",
   "scripts": {
@@ -32,5 +32,13 @@
     "babel-runtime": "^5.0.0-beta1",
     "source-map-support": "^0.2.10",
     "through2": "^0.6.3"
-  }
+  },
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/gikmx/gulp-sourcemaps-support.git"
+  },
+  "bugs":{
+    "url":"https://github.com/gikmx/gulp-sourcemaps-support/issues"
+  },
+  "homepage": "https://github.com/gikmx/gulp-sourcemaps-support"
 }
