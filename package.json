@@ -11,28 +11,6 @@
     "build": "gulp build",
     "watch": "gulp watch"
   },
-  "devDependencies": {
-    "babel": "^4.7.x",
-    "babel-eslint": "^2.0.x",
-    "chai": "^2.2.x",
-    "chalk": "^1.0.x",
-    "coveralls": "^2.11.x",
-    "del": "^1.1.x",
-    "gulp": "^3.8.x",
-    "gulp-babel": "^4.0.x",
-    "gulp-eslint": "^0.7.x",
-    "gulp-sourcemaps": "^1.5.x",
-    "gulp-spawn-mocha": "^2.0.x",
-    "gulp-watch": "^4.2.x",
-    "lazypipe": "^0.2.x",
-    "mocha": "^2.2.x",
-    "mocha-unfunk-reporter": "^0.4.x"
-  },
-  "dependencies": {
-    "babel-runtime": "^5.0.0-beta1",
-    "source-map-support": "^0.2.10",
-    "through2": "^0.6.3"
-  },
   "repository":{
     "type":"git",
     "url":"https://github.com/gikmx/gulp-sourcemaps-support.git"
@@ -40,5 +18,11 @@
   "bugs":{
     "url":"https://github.com/gikmx/gulp-sourcemaps-support/issues"
   },
-  "homepage": "https://github.com/gikmx/gulp-sourcemaps-support"
+  "homepage": "https://github.com/gikmx/gulp-sourcemaps-support",
+  "devDependencies": {},
+  "dependencies": {
+    "babel-runtime": "^5.0.0-beta1",
+    "source-map-support": "^0.2.10",
+    "through2": "^0.6.3"
+  }
 }
